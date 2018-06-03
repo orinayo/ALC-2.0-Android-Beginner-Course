@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.android.tictactoe.MainActivity">
+
+    <ImageView
+        style="@style/LogoStyle"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        style="@style/GameNameStyle"
+        android:text="@string/game_name" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="@dimen/sixteen_dp"
+        android:paddingEnd="@dimen/thirty_two_dp"
+        android:paddingStart="@dimen/thirty_two_dp">
+
+        <Button
+            android:id="@+id/singlePlayer"
+            style="@style/ButtonStyle"
+            android:layout_marginEnd="@dimen/twenty_dp"
+            android:padding="@dimen/sixteen_dp"
+            android:text="@string/single_player" />
+
+        <Button
+            android:id="@+id/multiPlayer"
+            style="@style/ButtonStyle"
+            android:layout_toEndOf="@id/singlePlayer"
+            android:padding="@dimen/sixteen_dp"
+            android:text="@string/multi_player" />
+
+        <Button
+            android:id="@+id/xCharacter"
+            style="@style/ButtonStyle"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/singlePlayer"
+            android:layout_marginEnd="@dimen/four_dp"
+            android:layout_marginStart="@dimen/twenty_two_dp"
+            android:text="@string/x_character" />
+
+        <TextView
+            android:id="@+id/player1"
+            style="@style/UserStyle"
+            android:layout_alignBaseline="@id/xCharacter"
+            android:layout_toEndOf="@id/xCharacter"
+            android:visibility="invisible" />
+
+        <Button
+            android:id="@+id/oCharacter"
+            style="@style/ButtonStyle"
+            android:layout_below="@+id/multiPlayer"
+            android:layout_marginEnd="@dimen/four_dp"
+            android:layout_marginStart="@dimen/seventeen_dp"
+            android:layout_toEndOf="@+id/singlePlayer"
+            android:text="@string/o_character" />
+
+        <TextView
+            android:id="@+id/player2"
+            style="@style/UserStyle"
+            android:layout_alignBaseline="@id/oCharacter"
+            android:layout_toEndOf="@id/oCharacter"
+            android:visibility="invisible" />
+
+        <Button
+            android:id="@+id/threeGrids"
+            style="@style/ButtonStyle"
+            android:layout_alignStart="@+id/xCharacter"
+            android:layout_below="@+id/xCharacter"
+            android:text="@string/three_grids" />
+
+        <Button
+            android:id="@+id/fiveGrids"
+            style="@style/ButtonStyle"
+            android:layout_alignStart="@+id/oCharacter"
+            android:layout_below="@+id/oCharacter"
+            android:text="@string/five_grids" />
+
+        <Button
+            android:id="@+id/beginButton"
+            style="@style/ButtonStyle"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/begin_button"
+            android:text="@string/begin_button" />
+
+    </RelativeLayout>
+</LinearLayout>

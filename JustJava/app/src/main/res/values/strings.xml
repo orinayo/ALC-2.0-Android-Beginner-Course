@@ -1,0 +1,21 @@
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name">Just Java</string>
+    <string name="customer_name">Name</string>
+    <string name="toppings">"Toppings"</string>
+    <string name="whipped_cream">"Whipped Cream"</string>
+    <string name="chocolate">"Chocolate"</string>
+    <string name="quantity">"Quantity"</string>
+    <string name="quantity_text" translatable="false">"0"</string>
+    <string name="order">"Order"</string>
+    <string name="plus_button" translatable="false">"+"</string>
+    <string name="minus_button" translatable="false">"-"</string>
+    <string name="hundred_cups">"You cannot have more than 100 coffees"</string>
+    <string name="one_cup">"You cannot have less than 1 coffee"</string>
+    <string name="order_summary_name">"Name: <xliff:g id="name" example="Segun Oyelade">%s</xliff:g>"</string>
+    <string name="order_summary_quantity">"Quantity: <xliff:g id="quantity" example="1">%d</xliff:g>"</string>
+    <string name="add_whipped_cream">"Add whipped cream? <xliff:g id="addWhippedCream" example="true">%b</xliff:g>"</string>
+    <string name="add_chocolate">"Add chocolate? <xliff:g id="addChocolate" example="true">%b</xliff:g>"</string>
+    <string name="total_price">"Total: N<xliff:g id="price" example="5">%d</xliff:g>"</string>
+    <string name="thank_you">"Thank you!"</string>
+    <string name="email_subject">"Just Java order for <xliff:g id="name" example="Segun Oyelade">%s</xliff:g>"</string>
+</resources>

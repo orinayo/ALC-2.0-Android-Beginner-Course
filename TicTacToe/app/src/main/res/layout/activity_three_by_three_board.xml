@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/green_background"
+    android:orientation="vertical"
+    tools:context="com.example.android.tictactoe.ThreeByThreeBoardActivity">
+
+    <LinearLayout style="@style/ScoreboardStyle">
+
+        <TextView
+            style="@style/PlayerScoreStyleTwo"
+            android:text="@string/x_wins"
+            android:textColor="#333333"/>
+
+        <TextView
+            android:id="@+id/x_score"
+            style="@style/PlayerScoreStyle"
+            android:text="@string/x_score" />
+
+        <TextView
+            style="@style/PlayerScoreStyleTwo"
+            android:text="@string/o_wins"
+            android:textColor="#333333"/>
+
+        <TextView
+            android:id="@+id/o_score"
+            style="@style/PlayerScoreStyle"
+            android:text="@string/o_score" />
+
+        <TextView
+            style="@style/PlayerScoreStyleTwo"
+            android:text="@string/draws"
+            android:textColor="#333333"/>
+
+        <TextView
+            android:id="@+id/draw_score"
+            style="@style/PlayerScoreStyleTwo"
+            android:text="@string/draws_score" />
+
+    </LinearLayout>
+
+    <RelativeLayout style="@style/BoardStyle">
+
+        <LinearLayout
+            android:id="@+id/row_one"
+            style="@style/RowStyle">
+
+            <Button
+                android:id="@+id/boxOne"
+                style="@style/GridStyle"
+                android:onClick="buttonPress" />
+
+            <Button
+                android:id="@+id/boxTwo"
+                style="@style/GridStyle"
+                android:onClick="buttonPress" />
+
+            <Button
+                android:id="@+id/boxThree"
+                style="@style/GridStyle"
+                android:onClick="buttonPress" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/row_two"
+            style="@style/RowStyle"
+            android:layout_below="@+id/row_one">
+
+            <Button
+                android:id="@+id/boxFour"
+                style="@style/GridStyle"
+                android:onClick="buttonPress" />
+
+            <Button
+                android:id="@+id/boxFive"
+                style="@style/GridStyle"
+                android:onClick="buttonPress" />
+
+            <Button
+                android:id="@+id/boxSix"
+                style="@style/GridStyle"
+                android:onClick="buttonPress" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/RowStyle"
+            android:layout_below="@+id/row_two">
+
+            <Button
+                android:id="@+id/boxSeven"
+                style="@style/GridStyle"
+                android:onClick="buttonPress" />
+
+            <Button
+                android:id="@+id/boxEight"
+                style="@style/GridStyle"
+                android:onClick="buttonPress" />
+
+            <Button
+                android:id="@+id/boxNine"
+                style="@style/GridStyle"
+                android:onClick="buttonPress" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/gameStatus"
+        style="@style/GameStatusStyle"
+        />
+
+    <LinearLayout style="@style/ResetButtonsRowStyle">
+
+        <Button
+            android:id="@+id/resetBoard"
+            style="@style/ResetButtonStyle"
+            android:text="@string/reset_board"/>
+
+        <Button
+            android:id="@+id/resetGame"
+            style="@style/ResetButtonStyle"
+            android:text="@string/reset_game"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>
