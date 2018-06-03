@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#463ae5"
+    tools:context="com.example.orinayo.scorekeeper.MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/topView"
+        android:layout_width="match_parent"
+        android:layout_height="260dp"
+        android:background="#fff">
+
+        <ImageView
+            android:id="@+id/finalsLogo"
+            android:layout_width="100dp"
+            android:layout_height="25dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/thenbafinalslogo" />
+
+
+        <ImageView
+            android:id="@+id/backgroundImage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/nbalogos"
+            android:layout_marginTop="40dp"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:id="@+id/team_a"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/finalsLogo"
+            android:layout_marginTop="32dp"
+            android:layout_marginLeft="4dp"
+            android:layout_marginStart="4dp"
+            android:text="@string/western"
+            android:textColor="#ff9900"
+            android:textSize="12sp"
+            android:typeface="sans" />
+
+        <TextView
+            android:id="@+id/team_a_score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/team_a"
+            android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp"
+            android:text="0"
+            android:textColor="#ffffff"
+            android:textSize="40sp"
+            android:typeface="serif" />
+
+        <TextView
+            android:id="@+id/team_b"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/finalsLogo"
+            android:layout_marginTop="32dp"
+            android:layout_marginRight="4dp"
+            android:layout_marginEnd="4dp"
+            android:text="@string/eastern"
+            android:textColor="#ff9900"
+            android:textSize="12sp"
+            android:typeface="sans" />
+
+        <TextView
+            android:id="@+id/team_b_score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/team_a"
+            android:layout_marginRight="8dp"
+            android:layout_marginEnd="8dp"
+            android:text="0"
+            android:textColor="#ffffff"
+            android:textSize="40sp"
+            android:typeface="serif" />
+
+        <TextView
+            android:id="@+id/team_a_reb_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/team_a_score"
+            android:layout_marginLeft="4dp"
+            android:layout_marginStart="4dp"
+            android:text="Rebounds"
+            android:textColor="#ff9900"
+            android:textSize="12sp"
+            android:typeface="sans" />
+
+        <TextView
+            android:id="@+id/team_a_rebound"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/team_a_reb_count"
+            android:layout_marginLeft="12dp"
+            android:layout_marginStart="12dp"
+            android:text="0"
+            android:textColor="#ffffff"
+            android:textSize="28sp"
+            android:typeface="serif" />
+
+        <TextView
+            android:id="@+id/team_b_reb_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/team_b_score"
+            android:layout_marginRight="4dp"
+            android:layout_marginEnd="4dp"
+            android:text="Rebounds"
+            android:textColor="#ff9900"
+            android:textSize="12sp"
+            android:typeface="sans" />
+
+        <TextView
+            android:id="@+id/team_b_rebound"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/team_b_reb_count"
+            android:layout_marginRight="12dp"
+            android:layout_marginEnd="12dp"
+            android:text="0"
+            android:textColor="#ffffff"
+            android:textSize="28sp"
+            android:typeface="serif" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:baselineAligned="false"
+        android:orientation="horizontal"
+        android:layout_below="@+id/topView"
+        android:layout_marginTop="8dp"
+        >
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="24dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:layout_marginStart="24dp"
+                android:onClick="addThreePointsForTeamA"
+                android:text="+3 Points"
+                android:background="#0a0088"
+                android:textColor="#f8f8fc"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="24dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:layout_marginStart="24dp"
+                android:onClick="addTwoPointsForTeamA"
+                android:text="+2 Points"
+                android:background="#0a0088"
+                android:textColor="#f8f8fc"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="24dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:layout_marginStart="24dp"
+                android:onClick="addOnePointForTeamA"
+                android:text="Free Throw"
+                android:background="#0a0088"
+                android:textColor="#f8f8fc"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:layout_marginEnd="24dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:layout_marginStart="24dp"
+                android:onClick="addReboundForTeamA"
+                android:text="Rebound"
+                android:background="#0a0088"
+                android:textColor="#f8f8fc"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@android:color/black" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="24dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:layout_marginStart="24dp"
+                android:onClick="addThreePointsForTeamB"
+                android:text="+3 Points"
+                android:background="#0a0088"
+                android:textColor="#f8f8fc"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="24dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:layout_marginStart="24dp"
+                android:onClick="addTwoPointsForTeamB"
+                android:text="+2 Points"
+                android:background="#0a0088"
+                android:textColor="#f8f8fc"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="24dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:layout_marginStart="24dp"
+                android:onClick="addOnePointForTeamB"
+                android:text="Free Throw"
+                android:background="#0a0088"
+                android:textColor="#f8f8fc"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:layout_marginEnd="24dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:layout_marginStart="24dp"
+                android:onClick="addReboundForTeamB"
+                android:text="Rebound"
+                android:background="#0a0088"
+                android:textColor="#f8f8fc"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="12dp"
+        android:layout_marginEnd="22dp"
+        android:layout_marginLeft="22dp"
+        android:layout_marginRight="22dp"
+        android:layout_marginStart="22dp"
+        android:onClick="reset"
+        android:text="Reset"
+        android:background="#ff9900"
+        android:textColor="#ffe1b3"/>
+
+
+
+</RelativeLayout>
+
+

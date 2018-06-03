@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Score Keeper</string>
+    <string name="western">"WESTERN\nCONF.\nChampion"</string>
+    <string name="eastern">"EASTERN\nCONF.\nChampion"</string>
+</resources>
